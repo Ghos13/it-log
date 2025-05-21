@@ -165,7 +165,7 @@ body, html {
 
 .logo img {
   width: 120px;
-  filter: drop-shadow(0 0 3px #00bcd4);
+  filter: drop-shadow(0 0 5px #00bcd4);
   cursor: pointer;
 }
 
