@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Sixtyfour, sans-serif;
+  color: white;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+  background-color: #000;
+}
+
+body,
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+main.all-Pages {
+  flex: 1;
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url(../images/zmaGlS.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about_title {
+  text-align: center;
+  padding: 20px;
+  font-size: 55px;
+}
+
+.about_pages {
+  line-height: 2;
+  font-size: 30px;
+  padding: 0 20px;
+}
+
+.about_span {
+  align-self: start;
+  color: #ffd700;
+}
+
+.header-navbar {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  column-gap: 25px;
+  justify-content: space-between;
+  list-style: none;
+}
+
+li {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  width: 100px;
+  height: auto;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.box {
+  width: 32%;
+  color: white;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 200px;
+  background: gray;
+  margin: 10px 0;
+}
+
+.footer-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+}
+.main_title{
+  text-align: center;
+  font-size: l;
+}
+
+@media (max-width: 768px) {
+  .about_title {
+    font-size: 35px;
+    padding: 15px 10px;
+  }
+
+  .about_pages {
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 0 15px;
+  }
+
+  .box {
+    width: 48%;
+    font-size: 35px;
+    height: 160px;
+  }
+
+  .header-navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  img {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about_title {
+    font-size: 28px;
+  }
+
+  .about_pages {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .box {
+    width: 100%;
+    font-size: 28px;
+    height: 130px;
+  }
+
+  li {
+    font-size: 16px;
+  }
+
+  img {
+    width: 70px;
+  }
+}
