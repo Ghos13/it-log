@@ -25,7 +25,9 @@ class Header extends React.Component {
                     profile
                   </Link>
                 </li>
-                <li className="ul_li">Log in </li>
+                <Link className="link-login" to="/login">
+                  Log in
+                </Link>
               </ul>
             </div>
           </div>

@@ -1,183 +1,268 @@
-* {
+/* Общие настройки */
+body, html {
+  background-color: #121212;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Sixtyfour, sans-serif;
-  color: white;
 }
 
-html,
-body,
-#root {
-  height: 100vh;
-  background-color: #000;
-}
-
-body,
-#root {
-  display: flex;
-  flex-direction: column;
-}
-
-main.all-Pages {
-  flex: 1;
-  max-width: 1800px;
-  width: 100%;
+/* Контейнер для центровки контента */
+.container {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-image: url(../images/zmaGlS.gif);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
+/* --- About Page --- */
 .about_title {
+  font-size: 3rem;
+  font-weight: 700;
   text-align: center;
-  padding: 20px;
-  font-size: 55px;
-}
-
-.about_pages {
-  line-height: 2;
-  font-size: 30px;
-  padding: 0 20px;
+  margin-bottom: 20px;
+  color: #ffcc00;
+  text-shadow: 0 0 5px #ffcc00;
 }
 
 .about_span {
-  align-self: start;
-  color: #ffd700;
+  color: #ffdd55;
+  font-style: italic;
+}
+
+.about_pages {
+  max-width: 700px;
+  margin: 0 auto 15px;
+  font-size: 1.3rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* --- Main Page --- */
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 140px); /* высота минус хедер и футер */
+}
+
+.main_title {
+  font-size: 3rem;
+  text-align: center;
+  color: #00bcd4;
+  text-shadow: 0 0 10px #00bcd4;
+}
+
+/* --- Profile Page --- */
+.main-profile .boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 30px 0;
+}
+
+.main-profile .box {
+  background: linear-gradient(145deg, #222, #111);
+  border-radius: 20px;
+  box-shadow: 8px 8px 15px #0d0d0d,
+              -8px -8px 15px #333333;
+  color: #ffcc00;
+  font-weight: 700;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.main-profile .box:hover {
+  transform: scale(1.1);
+  box-shadow: 10px 10px 20px #ffc107, -10px -10px 20px #ffaa00;
+}
+
+/* --- Login Page --- */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 140px);
+}
+
+.login-form {
+  background: #1e1e1e;
+  padding: 40px 50px;
+  border-radius: 25px;
+  box-shadow: 0 0 15px #0ff;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.login-label {
+  font-size: 1.1rem;
+  color: #00ffff;
+  font-weight: 600;
+}
+
+.login-name,
+.login-password {
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 15px;
+  background-color: #333;
+  color: #eee;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.login-name::placeholder,
+.login-password::placeholder {
+  color: #999;
+}
+
+.login-name:focus,
+.login-password:focus {
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.login-button {
+  padding: 15px 20px;
+  font-size: 1.3rem;
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-button:hover {
+  background: linear-gradient(90deg, #0077ff, #00ffff);
+}
+
+/* --- Header & Footer (немного подкрашу под новый стиль) --- */
+.header-component {
+  background-color: #111;
+  padding: 20px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.8);
 }
 
 .header-navbar {
-  padding-top: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
+.logo img {
+  width: 120px;
+  filter: drop-shadow(0 0 3px #00bcd4);
+  cursor: pointer;
 }
 
-ul {
-  display: flex;
-  column-gap: 25px;
-  justify-content: space-between;
+.nav ul {
   list-style: none;
-}
-
-li {
-  font-size: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-img {
-  width: 100px;
-  height: auto;
-}
-
-.boxes {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
   align-items: center;
-  flex-wrap: wrap;
-  margin: 20px 0;
+  padding: 0;
 }
 
-.box {
-  width: 32%;
-  color: white;
-  font-size: 50px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  height: 200px;
-  background: gray;
-  margin: 10px 0;
+.nav ul li a {
+  color: #eee;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
+.nav ul li a:hover {
+  color: #00bcd4;
+}
+
+.link-login {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #00bcd4;
+  color: #111 !important;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  margin-left: 20px;
+}
+
+.link-login:hover {
+  background-color: #0088cc;
+}
+
+/* Footer */
 .footer-component {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #111;
-  padding: 20px;
+  color: #777;
+  padding: 25px 0;
   text-align: center;
-  font-size: 18px;
+  font-size: 1rem;
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.8);
 }
 
 .footer-nav a {
-  color: white;
+  color: #00bcd4;
   text-decoration: none;
-}
-.main_title{
-  text-align: center;
-  font-size: l;
+  margin-left: 10px;
+  transition: color 0.3s ease;
 }
 
+.footer-nav a:hover {
+  color: #0088cc;
+}
+
+/* --- Адаптив --- */
 @media (max-width: 768px) {
   .about_title {
-    font-size: 35px;
-    padding: 15px 10px;
+    font-size: 2.2rem;
   }
 
   .about_pages {
-    font-size: 20px;
-    line-height: 1.6;
-    padding: 0 15px;
+    font-size: 1.1rem;
+    padding: 15px 15px;
   }
 
-  .box {
-    width: 48%;
-    font-size: 35px;
-    height: 160px;
+  .main-profile .boxes {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 
-  .header-navbar {
+  .login-form {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .nav ul {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     gap: 15px;
   }
 
-  ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  img {
-    width: 80px;
+  .link-login {
+    margin-left: 0;
   }
 }
 
 @media (max-width: 480px) {
   .about_title {
-    font-size: 28px;
+    font-size: 1.8rem;
   }
 
   .about_pages {
-    font-size: 18px;
-    padding: 0 10px;
+    font-size: 1rem;
   }
 
-  .box {
-    width: 100%;
-    font-size: 28px;
-    height: 130px;
-  }
-
-  li {
-    font-size: 16px;
-  }
-
-  img {
-    width: 70px;
+  .main-profile .box {
+    font-size: 2rem;
   }
 }
